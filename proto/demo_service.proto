@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "demo.server";
+option java_outer_classname = "DemoServiceProto";
+
+package demo.server;
+
+service DemoService {
+  rpc SayHello (DemoRequest) returns (DemoReply) {}
+}
+
+message DemoRequest {
+  string name = 1;
+}
+
+message DemoReply {
+  string message = 1;
+}
